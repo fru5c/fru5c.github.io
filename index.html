@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Manta Ray Site</title>
+    <link rel="icon" type="image/png" href="https://cdn.icon-icons.com/icons2/1308/PNG/512/fish_86248.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+
+
+
+    <style>
+        /* General Styles */
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #9eceffe6;
+            color: #c6d9f0d9;
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: rgba(47, 56, 63, 0.3);
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+
+
+        header {
+            background-color: #000000de;
+            padding: 20px 30px;
+
+        }
+
+            header h1 {
+                margin: 0;
+                font-size: 48px;
+                color: #c6d9f0d9;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+
+
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            align-items: center;
+            gap: 40px;
+        }
+
+            .main-content img {
+                max-width: 30%;
+                border-radius: 8px;
+                box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+                transition: transform 0.3s ease-in-out;
+            }
+
+                .main-content img:hover {
+                    transform: scale(1.1);
+                }
+
+            .main-content .text {
+                flex: 1;
+                padding: 20px;
+                text-align: center;
+                background-color: #000000de;
+                border-radius: 9px;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+                font-size: 15px;
+            }
+
+
+                .main-content .text h2 {
+                    color: #c6d9f0d9;
+                    font-size: 36px;
+                    margin-top: 0;
+                    text-transform: uppercase;
+                }
+
+                .main-content .text p {
+                    line-height: 1.8;
+                }
+
+            .main-content:nth-child(even) .text {
+                order: 2;
+            }
+
+            .main-content:nth-child(even) img {
+                order: 1;
+            }
+
+ 
+
+        footer {
+            background-color: #0e1626;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            border-radius: 0 0 8px 8px;
+        }
+
+            footer p {
+                margin: 0;
+                font-size: 14px;
+            }
+
+
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: rgba(47, 56, 63, 0.3);
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(47, 56, 63, 0.3);
+        }
+
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            text-align: center;
+          
+        }
+
+            .image-container img {
+                max-width: 40%;
+                max-height: 40%;
+                object-fit: contain;
+                border-radius: 8px;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+            }
+
+
+        .caption {
+            margin-top: 10px;
+            color: #ffffffce;
+        }
+
+
+        li {
+            text-align: center;
+            display: inline;
+            padding: 8px;
+            background-color: #c6d9f0d9;
+            border-style: none;
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+
+
+
+        .navigation-bar {
+            background-color: #000000de; /* Boja pozadine navigacionog bara */
+            padding: 30px; /* Prostor oko unutrašnjosti navigacionog bara */
+        }
+
+            .navigation-bar ul {
+                list-style-type: none; /* Uklanja tačkice/brojeve iz listi */
+                margin: 5px;
+                padding: 0;
+                display: flex; /* Koristimo flexbox za horizontalno raspoređivanje */
+            }
+
+            .navigation-bar li {
+                flex: 1; /* Svaki <li> element zauzima jednaku širinu */
+                text-align: center; /* Centriranje teksta unutar <li> */
+                border-radius: 10px; /* Zaobljene ivice */
+                overflow: hidden; /* Osigurava da se background-color i border-radius primene */
+            }
+
+            .navigation-bar a {
+                display: block;
+                color: white;
+                text-decoration: dashed;
+                padding: 10px 10px; /* Prostor između teksta i ivica <li> elementa */
+            }
+
+                .navigation-bar a:hover {
+                    background-color: #9eceffe6; /* Boja pozadine na hover stanju */
+                    transform: scale(1.4);
+                }
+
+
+
+        .contact-form-container {
+            text-align: center; /* Centriranje sadržaja */
+            margin-top: 50px; /* Margina iznad kontejnera forme */
+        }
+
+        .contact-form {
+            background-color: #ffffffc1; /* Boja pozadine forme */
+            padding: 20px; /* Prostor unutar forme */
+            border-radius: 10px; /* Zaobljeni ivici */
+            box-shadow: 0 0 15px rgba(0,0,0,0.7); /* Senka oko forme */
+            max-width: 500px; /* Maksimalna širina forme */
+            margin: 0 auto; /* Centriranje forme na stranici */
+        }
+
+            .contact-form h2 {
+                color: #333; /* Boja teksta za naslov */
+                font-size: 22px; /* Veličina fonta za naslov */
+                margin-bottom: 20px; /* Margina ispod naslova */
+            }
+
+            .contact-form label {
+                color: #555; /* Boja teksta za labele */
+                font-size: 16px; /* Veličina fonta za labele */
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                width: 100%; /* Puna širina input polja i textarea */
+                padding: 10px; /* Prostor unutar input polja i textarea */
+                margin-bottom: 15px; /* Margina između polja */
+                border: 1px solid #ddd; /* Ivica oko input polja i textarea */
+                border-radius: 5px; /* Zaobljeni ivici */
+                box-sizing: border-box; /* Da se padding ne računa dodatno */
+                font-size: 16px; /* Veličina fonta za input polja i textarea */
+            }
+
+            .contact-form button {
+                background-color: #000000de; /* Boja pozadine dugmeta */
+                color: white; /* Boja teksta na dugmetu */
+                padding: 12px 20px; /* Prostor unutar dugmeta */
+                border: none; /* Bez ivice na dugmetu */
+                border-radius: 5px; /* Zaobljeni ivici */
+                cursor: pointer; /* Promena kursora na pokazivač prilikom hovera */
+                font-size: 16px; /* Veličina fonta za dugme */
+                transition: background-color 0.3s; /* Glatka tranzicija za boju pozadine */
+            }
+
+                .contact-form button:hover {
+                    background-color: #00000099; /* Boja pozadine dugmeta na hover */
+                }
+
+
+    </style>
+
+</head>
+<body>
+
+    <nav class="navigation-bar">
+        <ul>
+            <li><a href="default.asp">Home</a></li>
+            <li><a href="contact.asp">Contact</a></li>
+            <li><a href="about.asp">Learn More</a></li>
+        </ul>
+        </nav>
+
+
+        <header>
+            <h1>Magnificent Manta Rays</h1>
+        </header>
+        <div class="container">
+            <div class="main-content">
+                <img src="https://strangebehaviors.files.wordpress.com/2014/09/manta-rays.jpg" alt="Manta Ray Image">
+                <div class="text">
+                    <h2>About Manta Rays</h2>
+                    <p>Manta rays are large rays belonging to the genus Manta. These gentle giants are known for their impressive size, graceful movements, and distinctive cephalic lobes that resemble wings. They are found in tropical and subtropical waters around the world and are filter feeders, primarily consuming plankton.</p>
+                    <p>Manta rays are fascinating creatures that inspire awe and wonder among divers and marine enthusiasts alike.</p>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="text">
+                    <h2>Conservation Efforts</h2>
+                    <p>Due to threats such as bycatch, habitat destruction, and illegal fishing, manta rays are listed as vulnerable or endangered species. Conservation efforts focus on protecting their habitats, regulating fishing practices, and promoting responsible tourism.</p>
+                    <p>Organizations and researchers work tirelessly to raise awareness and implement measures to ensure the survival of these magnificent creatures for future generations.</p>
+                </div>
+                <img src="http://i.huffpost.com/gen/801182/images/o-AUSTRALIA-MANTA-RAY-facebook.jpg" alt="Manta Ray Conservation">
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="main-content">
+                <img src="https://strangebehaviors.files.wordpress.com/2014/09/manta-rays.jpg" alt="Manta Ray Image">
+                <div class="text">
+                    <h2>About Manta Rays</h2>
+                    <p>Manta rays are large rays belonging to the genus Manta. These gentle giants are known for their impressive size, graceful movements, and distinctive cephalic lobes that resemble wings. They are found in tropical and subtropical waters around the world and are filter feeders, primarily consuming plankton.</p>
+                    <p>Manta rays are fascinating creatures that inspire awe and wonder among divers and marine enthusiasts alike.</p>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="text">
+                    <h2>PREY</h2>
+                    <p>Even though they come off as big and scary, manta rays are filter feeders as well as macropredators. On the surface, they consume large quantities of zooplankton in the form of shrimp, krill, and planktonic crabs.</p>
+                    <p>In deeper depths, mantas consume small to medium-sized fish.</p>
+                    
+                </div>
+                <img src="https://www.hawaii-guide.com/images/made/images/blocks/three-manta-ray-ss-1389665531-1200x800_1100_700_95_c1_c_c_0_0.jpg" alt="Manta Ray Conservation">
+            </div>
+        </div>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact and Species Buttons</title>
+        <link rel="stylesheet" href="styles.css">
+        
+
+
+
+
+
+
+
+        <div class="container">
+            <h2>Some examples</h2>
+            <div class="image-container">
+                <div>
+                    <img src="https://strangebehaviors.files.wordpress.com/2014/09/manta-rays.jpg" alt="Mr 1">
+                    <p class="caption">A cute manta ray</p>
+                </div>
+                <div>
+                    <img src="https://wallpapercave.com/wp/wp2372044.jpg" alt="Mr 2">
+                    <p class="caption">Another cute manta ray</p>
+                </div>
+                <div>
+                    <img src="http://i.huffpost.com/gen/801182/images/o-AUSTRALIA-MANTA-RAY-facebook.jpg" alt="Mr 3">
+                    <p class="caption">Cutest manta ray</p>
+                </div>
+            </div>
+        </div>
+
+
+       
+
+
+            <div class="contact-form-container">
+                <div class="contact-form">
+                    <h2>Feel Free To Contact Me About Anything :)</h2>
+                    <form action="#" method="post">
+                        <label for="name">Your Name:</label><br>
+                        <input type="text" id="name" name="name" required><br>
+
+                        <label for="email">Your Email:</label><br>
+                        <input type="email" id="email" name="email" required><br>
+
+                        <label for="message">Your Message:</label><br>
+                        <textarea id="message" name="message" rows="4" required></textarea><br>
+
+                        <button type="submit" class="button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+
+            <footer>
+                <p>&copy; Cutest Manta Ray Site. All rights reserved.</p>
+            </footer>
+
+
+
+        </body>
+</html>
